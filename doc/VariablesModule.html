@@ -1,0 +1,2007 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><title
+    >VariablesModule</title
+    ><link href="ocean.css" rel="stylesheet" type="text/css" title="Ocean"
+     /><script src="haddock-util.js" type="text/javascript"
+    ></script
+    ><script type="text/javascript"
+    >//<![CDATA[
+window.onload = function () {pageLoad();setSynopsis("mini_VariablesModule.html");};
+//]]>
+</script
+    ></head
+  ><body
+  ><div id="package-header"
+    ><ul class="links" id="page-menu"
+      ><li
+	><a href="index.html"
+	  >Contents</a
+	  ></li
+	><li
+	><a href="doc-index.html"
+	  >Index</a
+	  ></li
+	></ul
+      ><p class="caption"
+      >flp-basic</p
+      ></div
+    ><div id="content"
+    ><div id="module-header"
+      ><p class="caption"
+	>VariablesModule</p
+	></div
+      ><div id="description"
+      ><p class="caption"
+	>Description</p
+	><div class="doc"
+	><p
+	  >Obsahuje funkcie a struktury na pracu s funkciama a premennyma
+</p
+	  ></div
+	></div
+      ><div id="synopsis"
+      ><p id="control.syn" class="caption expander" onclick="toggleSection('syn')"
+	>Synopsis</p
+	><ul id="section.syn" class="hide" onclick="toggleSection('syn')"
+	><li class="src short"
+	  ><span class="keyword"
+	    >data</span
+	    >  <a href="#t:Expr"
+	    >Expr</a
+	    > <ul class="subs"
+	    ><li
+	      >= <a href="#v:Blank"
+		>Blank</a
+		>  </li
+	      ><li
+	      >| <a href="#v:LiteralInt"
+		>LiteralInt</a
+		> Integer  </li
+	      ><li
+	      >| <a href="#v:LiteralDouble"
+		>LiteralDouble</a
+		> Double  </li
+	      ><li
+	      >| <a href="#v:LiteralBool"
+		>LiteralBool</a
+		> Bool  </li
+	      ><li
+	      >| <a href="#v:LiteralString"
+		>LiteralString</a
+		> String  </li
+	      ><li
+	      >| <a href="#v:Var"
+		>Var</a
+		> String  </li
+	      ><li
+	      >| <a href="#v:Mult"
+		>Mult</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:Plus"
+		>Plus</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:Minus"
+		>Minus</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:Div"
+		>Div</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:GrT"
+		>GrT</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:LeT"
+		>LeT</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:Equals"
+		>Equals</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:NotEquals"
+		>NotEquals</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:GrTE"
+		>GrTE</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:LeTE"
+		>LeTE</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:UnMinus"
+		>UnMinus</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:Function"
+		>Function</a
+		> String [<a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>]  </li
+	      ><li
+	      >| <a href="#v:FunctionDef"
+		>FunctionDef</a
+		> { <ul class="subs"
+		><li
+		  ><a href="#v:fncName"
+		    >fncName</a
+		    > &#8759; String</li
+		  ><li
+		  ><a href="#v:fncParams"
+		    >fncParams</a
+		    > &#8759; [(String, <a href="VariablesModule.html#t:Expr"
+		    >Expr</a
+		    >, <a href="VariablesModule.html#t:VarTypes"
+		    >VarTypes</a
+		    >)]</li
+		  ><li
+		  ><a href="#v:retType"
+		    >retType</a
+		    > &#8759; <a href="VariablesModule.html#t:VarTypes"
+		    >VarTypes</a
+		    ></li
+		  ><li
+		  ><a href="#v:body"
+		    >body</a
+		    > &#8759; [<a href="VariablesModule.html#t:Command"
+		    >Command</a
+		    >]</li
+		  ><li
+		  ><a href="#v:fncVariables"
+		    >fncVariables</a
+		    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+		    >SymbolTable</a
+		    ></li
+		  ><li
+		  ><a href="#v:retValue"
+		    >retValue</a
+		    > &#8759; <a href="VariablesModule.html#t:Expr"
+		    >Expr</a
+		    ></li
+		  ><li
+		  ><a href="#v:evRetValue"
+		    >evRetValue</a
+		    > &#8759; <a href="VariablesModule.html#t:Expr"
+		    >Expr</a
+		    ></li
+		  ></ul
+		> }</li
+	      ><li
+	      >| <a href="#v:FunctionDec"
+		>FunctionDec</a
+		> String [(String, <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>, <a href="VariablesModule.html#t:VarTypes"
+		>VarTypes</a
+		>)] <a href="VariablesModule.html#t:VarTypes"
+		>VarTypes</a
+		>  </li
+	      ></ul
+	    ></li
+	  ><li class="src short"
+	  ><span class="keyword"
+	    >data</span
+	    >  <a href="#t:Command"
+	    >Command</a
+	    > <ul class="subs"
+	    ><li
+	      >= <a href="#v:Empty"
+		>Empty</a
+		>  </li
+	      ><li
+	      >| <a href="#v:Assign"
+		>Assign</a
+		> String <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:NewVariable"
+		>NewVariable</a
+		> String <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		> <a href="VariablesModule.html#t:VarTypes"
+		>VarTypes</a
+		>  </li
+	      ><li
+	      >| <a href="#v:Print"
+		>Print</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:Seq"
+		>Seq</a
+		> [<a href="VariablesModule.html#t:Command"
+		>Command</a
+		>]  </li
+	      ><li
+	      >| <a href="#v:Input"
+		>Input</a
+		> String  </li
+	      ><li
+	      >| <a href="#v:If"
+		>If</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		> <a href="VariablesModule.html#t:Command"
+		>Command</a
+		> <a href="VariablesModule.html#t:Command"
+		>Command</a
+		>  </li
+	      ><li
+	      >| <a href="#v:SimpleIf"
+		>SimpleIf</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		> <a href="VariablesModule.html#t:Command"
+		>Command</a
+		>  </li
+	      ><li
+	      >| <a href="#v:While"
+		>While</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		> <a href="VariablesModule.html#t:Command"
+		>Command</a
+		>  </li
+	      ><li
+	      >| <a href="#v:DeclareFunction"
+		>DeclareFunction</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:DeclareFncs"
+		>DeclareFncs</a
+		> [<a href="VariablesModule.html#t:Command"
+		>Command</a
+		>]  </li
+	      ><li
+	      >| <a href="#v:DefineFncs"
+		>DefineFncs</a
+		> [<a href="VariablesModule.html#t:Command"
+		>Command</a
+		>]  </li
+	      ><li
+	      >| <a href="#v:DefineFunction"
+		>DefineFunction</a
+		> <a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>  </li
+	      ><li
+	      >| <a href="#v:ReturnInScope"
+		>ReturnInScope</a
+		>  </li
+	      ><li
+	      >| <a href="#v:CallFunction"
+		>CallFunction</a
+		> String [<a href="VariablesModule.html#t:Expr"
+		>Expr</a
+		>]  </li
+	      ><li
+	      >| <a href="#v:Document"
+		>Document</a
+		> [<a href="VariablesModule.html#t:Command"
+		>Command</a
+		>] [<a href="VariablesModule.html#t:Command"
+		>Command</a
+		>]  </li
+	      ></ul
+	    ></li
+	  ><li class="src short"
+	  ><span class="keyword"
+	    >type</span
+	    > <a href="#t:SymbolTable"
+	    >SymbolTable</a
+	    > = [(String, <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >, <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >)]</li
+	  ><li class="src short"
+	  ><a href="#v:castIntToDouble"
+	    >castIntToDouble</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:myDiv"
+	    >myDiv</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:set"
+	    >set</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    > &#8594; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:get"
+	    >get</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; (<a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >, <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >)</li
+	  ><li class="src short"
+	  ><a href="#v:getAllFnc"
+	    >getAllFnc</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:getAllFncDec"
+	    >getAllFncDec</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:getFncDef"
+	    >getFncDef</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; ([(String, <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >, <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >)], <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >, [<a href="VariablesModule.html#t:Command"
+	    >Command</a
+	    >], <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    >, <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >, <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >)</li
+	  ><li class="src short"
+	  ><a href="#v:getFncDefAll"
+	    >getFncDefAll</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:isFncDef"
+	    >isFncDef</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:getFncDec"
+	    >getFncDec</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; Maybe ([(String, <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >, <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >)], <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >)</li
+	  ><li class="src short"
+	  ><a href="#v:isFncDec"
+	    >isFncDec</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:getFncParams"
+	    >getFncParams</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; [(String, <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >, <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >)]</li
+	  ><li class="src short"
+	  ><a href="#v:getFncRetType"
+	    >getFncRetType</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:getFncBody"
+	    >getFncBody</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; [<a href="VariablesModule.html#t:Command"
+	    >Command</a
+	    >]</li
+	  ><li class="src short"
+	  ><a href="#v:getFncVariables"
+	    >getFncVariables</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:getFncRetValueExpr"
+	    >getFncRetValueExpr</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:getFncRetValue"
+	    >getFncRetValue</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:getEvaluatedRetValue"
+	    >getEvaluatedRetValue</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:getFncDecParams"
+	    >getFncDecParams</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; [(String, <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >, <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >)]</li
+	  ><li class="src short"
+	  ><a href="#v:getFncDecRetType"
+	    >getFncDecRetType</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:getFncCalls"
+	    >getFncCalls</a
+	    > &#8759; [<a href="VariablesModule.html#t:Command"
+	    >Command</a
+	    >] &#8594; [<a href="VariablesModule.html#t:Command"
+	    >Command</a
+	    >]</li
+	  ><li class="src short"
+	  ><a href="#v:fncDecAndDefMatch"
+	    >fncDecAndDefMatch</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:setFncEvValue"
+	    >setFncEvValue</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:isDefinitionMissing"
+	    >isDefinitionMissing</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><span class="keyword"
+	    >data</span
+	    >  <a href="#t:VarTypes"
+	    >VarTypes</a
+	    > <ul class="subs"
+	    ><li
+	      >= <a href="#v:BoolVar"
+		>BoolVar</a
+		>  </li
+	      ><li
+	      >| <a href="#v:IntVar"
+		>IntVar</a
+		>  </li
+	      ><li
+	      >| <a href="#v:DoubleVar"
+		>DoubleVar</a
+		>  </li
+	      ><li
+	      >| <a href="#v:StringVar"
+		>StringVar</a
+		>  </li
+	      ><li
+	      >| <a href="#v:BlankVar"
+		>BlankVar</a
+		>  </li
+	      ><li
+	      >| <a href="#v:FunctionVar"
+		>FunctionVar</a
+		>  </li
+	      ><li
+	      >| <a href="#v:FunctionDecVar"
+		>FunctionDecVar</a
+		>  </li
+	      ><li
+	      >| <a href="#v:FunctionDefVar"
+		>FunctionDefVar</a
+		>  </li
+	      ><li
+	      >| <a href="#v:VarName"
+		>VarName</a
+		>  </li
+	      ></ul
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:getVarType"
+	    >getVarType</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; Maybe <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:isBlankVar"
+	    >isBlankVar</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:isIntLiteral"
+	    >isIntLiteral</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:isDoubleLiteral"
+	    >isDoubleLiteral</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:isBoolLiteral"
+	    >isBoolLiteral</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:isStringLiteral"
+	    >isStringLiteral</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:isBlankLiteral"
+	    >isBlankLiteral</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:isFunction"
+	    >isFunction</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:isVarName"
+	    >isVarName</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:isExpr"
+	    >isExpr</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:isUnMinusLiteral"
+	    >isUnMinusLiteral</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:getUnMinusLiteralType"
+	    >getUnMinusLiteralType</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:isIntVar"
+	    >isIntVar</a
+	    > &#8759; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:isDoubleVar"
+	    >isDoubleVar</a
+	    > &#8759; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:isBoolVar"
+	    >isBoolVar</a
+	    > &#8759; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:isStringVar"
+	    >isStringVar</a
+	    > &#8759; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:isFunctionVar"
+	    >isFunctionVar</a
+	    > &#8759; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:getValueType"
+	    >getValueType</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    ></li
+	  ></ul
+	></div
+      ><div id="interface"
+      ><h1
+	>Documentation</h1
+	><div class="top"
+	><p class="src"
+	  ><span class="keyword"
+	    >data</span
+	    >  <a name="t:Expr" class="def"
+	    >Expr</a
+	    >  </p
+	  ><div class="doc"
+	  ><p
+	    >Hodnoty premennych
+</p
+	    ></div
+	  ><div class="subs constructors"
+	  ><p class="caption"
+	    >Constructors</p
+	    ><table
+	    ><tr
+	      ><td class="src"
+		><a name="v:Blank" class="def"
+		  >Blank</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:LiteralInt" class="def"
+		  >LiteralInt</a
+		  > Integer</td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:LiteralDouble" class="def"
+		  >LiteralDouble</a
+		  > Double</td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:LiteralBool" class="def"
+		  >LiteralBool</a
+		  > Bool</td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:LiteralString" class="def"
+		  >LiteralString</a
+		  > String</td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:Var" class="def"
+		  >Var</a
+		  > String</td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:Mult" class="def"
+		  >Mult</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:Plus" class="def"
+		  >Plus</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:Minus" class="def"
+		  >Minus</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:Div" class="def"
+		  >Div</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:GrT" class="def"
+		  >GrT</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:LeT" class="def"
+		  >LeT</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:Equals" class="def"
+		  >Equals</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:NotEquals" class="def"
+		  >NotEquals</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:GrTE" class="def"
+		  >GrTE</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:LeTE" class="def"
+		  >LeTE</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:UnMinus" class="def"
+		  >UnMinus</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:Function" class="def"
+		  >Function</a
+		  > String [<a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  >]</td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:FunctionDef" class="def"
+		  >FunctionDef</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td colspan="2"
+		><div class="subs fields"
+		  ><p class="caption"
+		    >Fields</p
+		    ><dl
+		    ><dt class="src"
+		      ><a name="v:fncName" class="def"
+			>fncName</a
+			> &#8759; String</dt
+		      ><dd class="doc empty"
+		      >&nbsp;</dd
+		      ><dt class="src"
+		      ><a name="v:fncParams" class="def"
+			>fncParams</a
+			> &#8759; [(String, <a href="VariablesModule.html#t:Expr"
+			>Expr</a
+			>, <a href="VariablesModule.html#t:VarTypes"
+			>VarTypes</a
+			>)]</dt
+		      ><dd class="doc empty"
+		      >&nbsp;</dd
+		      ><dt class="src"
+		      ><a name="v:retType" class="def"
+			>retType</a
+			> &#8759; <a href="VariablesModule.html#t:VarTypes"
+			>VarTypes</a
+			></dt
+		      ><dd class="doc empty"
+		      >&nbsp;</dd
+		      ><dt class="src"
+		      ><a name="v:body" class="def"
+			>body</a
+			> &#8759; [<a href="VariablesModule.html#t:Command"
+			>Command</a
+			>]</dt
+		      ><dd class="doc empty"
+		      >&nbsp;</dd
+		      ><dt class="src"
+		      ><a name="v:fncVariables" class="def"
+			>fncVariables</a
+			> &#8759; <a href="VariablesModule.html#t:SymbolTable"
+			>SymbolTable</a
+			></dt
+		      ><dd class="doc empty"
+		      >&nbsp;</dd
+		      ><dt class="src"
+		      ><a name="v:retValue" class="def"
+			>retValue</a
+			> &#8759; <a href="VariablesModule.html#t:Expr"
+			>Expr</a
+			></dt
+		      ><dd class="doc empty"
+		      >&nbsp;</dd
+		      ><dt class="src"
+		      ><a name="v:evRetValue" class="def"
+			>evRetValue</a
+			> &#8759; <a href="VariablesModule.html#t:Expr"
+			>Expr</a
+			></dt
+		      ><dd class="doc empty"
+		      >&nbsp;</dd
+		      ></dl
+		    ><div class="clear"
+		    ></div
+		    ></div
+		  ></td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:FunctionDec" class="def"
+		  >FunctionDec</a
+		  > String [(String, <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  >, <a href="VariablesModule.html#t:VarTypes"
+		  >VarTypes</a
+		  >)] <a href="VariablesModule.html#t:VarTypes"
+		  >VarTypes</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ></table
+	    ></div
+	  ><div class="subs instances"
+	  ><p id="control.i:Expr" class="caption collapser" onclick="toggleSection('i:Expr')"
+	    >Instances</p
+	    ><div id="section.i:Expr" class="show"
+	    ><table
+	      ><tr
+		><td class="src"
+		  >Eq <a href="VariablesModule.html#t:Expr"
+		    >Expr</a
+		    ></td
+		  ><td class="doc empty"
+		  >&nbsp;</td
+		  ></tr
+		><tr
+		><td class="src"
+		  >Num <a href="VariablesModule.html#t:Expr"
+		    >Expr</a
+		    ></td
+		  ><td class="doc"
+		  ><p
+		    >Definicia vypoctov nad Expr
+</p
+		    ></td
+		  ></tr
+		><tr
+		><td class="src"
+		  >Ord <a href="VariablesModule.html#t:Expr"
+		    >Expr</a
+		    ></td
+		  ><td class="doc empty"
+		  >&nbsp;</td
+		  ></tr
+		><tr
+		><td class="src"
+		  >Read <a href="VariablesModule.html#t:Expr"
+		    >Expr</a
+		    ></td
+		  ><td class="doc"
+		  ><p
+		    >Zabezpeci spravne cistanie zo vstupu
+</p
+		    ></td
+		  ></tr
+		><tr
+		><td class="src"
+		  >Show <a href="VariablesModule.html#t:Expr"
+		    >Expr</a
+		    ></td
+		  ><td class="doc"
+		  ><p
+		    >Zabezpeci spravne zobrazenie na vystup
+</p
+		    ></td
+		  ></tr
+		></table
+	      ></div
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><span class="keyword"
+	    >data</span
+	    >  <a name="t:Command" class="def"
+	    >Command</a
+	    >  </p
+	  ><div class="doc"
+	  ><p
+	    >Datova struktura pre prikazy      
+</p
+	    ></div
+	  ><div class="subs constructors"
+	  ><p class="caption"
+	    >Constructors</p
+	    ><table
+	    ><tr
+	      ><td class="src"
+		><a name="v:Empty" class="def"
+		  >Empty</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:Assign" class="def"
+		  >Assign</a
+		  > String <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:NewVariable" class="def"
+		  >NewVariable</a
+		  > String <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  > <a href="VariablesModule.html#t:VarTypes"
+		  >VarTypes</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:Print" class="def"
+		  >Print</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:Seq" class="def"
+		  >Seq</a
+		  > [<a href="VariablesModule.html#t:Command"
+		  >Command</a
+		  >]</td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:Input" class="def"
+		  >Input</a
+		  > String</td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:If" class="def"
+		  >If</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  > <a href="VariablesModule.html#t:Command"
+		  >Command</a
+		  > <a href="VariablesModule.html#t:Command"
+		  >Command</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:SimpleIf" class="def"
+		  >SimpleIf</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  > <a href="VariablesModule.html#t:Command"
+		  >Command</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:While" class="def"
+		  >While</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  > <a href="VariablesModule.html#t:Command"
+		  >Command</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:DeclareFunction" class="def"
+		  >DeclareFunction</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:DeclareFncs" class="def"
+		  >DeclareFncs</a
+		  > [<a href="VariablesModule.html#t:Command"
+		  >Command</a
+		  >]</td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:DefineFncs" class="def"
+		  >DefineFncs</a
+		  > [<a href="VariablesModule.html#t:Command"
+		  >Command</a
+		  >]</td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:DefineFunction" class="def"
+		  >DefineFunction</a
+		  > <a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:ReturnInScope" class="def"
+		  >ReturnInScope</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:CallFunction" class="def"
+		  >CallFunction</a
+		  > String [<a href="VariablesModule.html#t:Expr"
+		  >Expr</a
+		  >]</td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:Document" class="def"
+		  >Document</a
+		  > [<a href="VariablesModule.html#t:Command"
+		  >Command</a
+		  >] [<a href="VariablesModule.html#t:Command"
+		  >Command</a
+		  >]</td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ></table
+	    ></div
+	  ><div class="subs instances"
+	  ><p id="control.i:Command" class="caption collapser" onclick="toggleSection('i:Command')"
+	    >Instances</p
+	    ><div id="section.i:Command" class="show"
+	    ><table
+	      ><tr
+		><td class="src"
+		  >Eq <a href="VariablesModule.html#t:Command"
+		    >Command</a
+		    ></td
+		  ><td class="doc empty"
+		  >&nbsp;</td
+		  ></tr
+		><tr
+		><td class="src"
+		  >Ord <a href="VariablesModule.html#t:Command"
+		    >Command</a
+		    ></td
+		  ><td class="doc empty"
+		  >&nbsp;</td
+		  ></tr
+		><tr
+		><td class="src"
+		  >Show <a href="VariablesModule.html#t:Command"
+		    >Command</a
+		    ></td
+		  ><td class="doc empty"
+		  >&nbsp;</td
+		  ></tr
+		></table
+	      ></div
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><span class="keyword"
+	    >type</span
+	    > <a name="t:SymbolTable" class="def"
+	    >SymbolTable</a
+	    > = [(String, <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >, <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >)]</p
+	  ><div class="doc"
+	  ><p
+	    >List (meno,hodnota,typ) premennych
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:castIntToDouble" class="def"
+	    >castIntToDouble</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Pretypuje LiteralInt na LiteralDouble
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:myDiv" class="def"
+	    >myDiv</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Delenie Expr vyrazov
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:set" class="def"
+	    >set</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    > &#8594; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Vlozi premennu resp. funkciu do tabulky
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:get" class="def"
+	    >get</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; (<a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >, <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >)</p
+	  ><div class="doc"
+	  ><p
+	    >Vyhlada premennu, nevracia funkcie
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getAllFnc" class="def"
+	    >getAllFnc</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Vrati vsetky definicie funkcii
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getAllFncDec" class="def"
+	    >getAllFncDec</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Vrati vsetky deklaracie funkcii
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getFncDef" class="def"
+	    >getFncDef</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; ([(String, <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >, <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >)], <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >, [<a href="VariablesModule.html#t:Command"
+	    >Command</a
+	    >], <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    >, <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >, <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >)</p
+	  ><div class="doc"
+	  ><p
+	    >Vyhlada definiciu funkcie
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getFncDefAll" class="def"
+	    >getFncDefAll</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Vyhlada defniciu funkcie a vrati ju celu ako je ulozena v SymbolTable
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isFncDef" class="def"
+	    >isFncDef</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; Bool</p
+	  ><div class="doc"
+	  ><p
+	    >Zisti ci uz je funkcia definovana
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getFncDec" class="def"
+	    >getFncDec</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; Maybe ([(String, <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >, <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >)], <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >)</p
+	  ><div class="doc"
+	  ><p
+	    >Vyhlada deklaraciu funkcie
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isFncDec" class="def"
+	    >isFncDec</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; Bool</p
+	  ><div class="doc"
+	  ><p
+	    >Zisti ci je uz funkcia deklarovana
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getFncParams" class="def"
+	    >getFncParams</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; [(String, <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >, <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >)]</p
+	  ><div class="doc"
+	  ><p
+	    >Vrati vsetky parametre funkcie
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getFncRetType" class="def"
+	    >getFncRetType</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Vrati typ navratovej hodnoty funkcie
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getFncBody" class="def"
+	    >getFncBody</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; [<a href="VariablesModule.html#t:Command"
+	    >Command</a
+	    >]</p
+	  ><div class="doc"
+	  ><p
+	    >Vrati telo funkcie (sekvenciu prikazov)
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getFncVariables" class="def"
+	    >getFncVariables</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Vsetky lokalne premenne funkcie
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getFncRetValueExpr" class="def"
+	    >getFncRetValueExpr</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Vrati hodnotu navratovej hodnoty ako Expr bez vyhodnotenia
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getFncRetValue" class="def"
+	    >getFncRetValue</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Vrati navratovu hodnotu funkcie a ak je to premenna tak aj vyhodnoti jej hodnotu
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getEvaluatedRetValue" class="def"
+	    >getEvaluatedRetValue</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Pouziva sa ak je navratova hodnota premenna, tak vrati hodnotu
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getFncDecParams" class="def"
+	    >getFncDecParams</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; [(String, <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >, <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    >)]</p
+	  ><div class="doc"
+	  ><p
+	    >Vrati vsetky parametre deklaracia funkcie
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getFncDecRetType" class="def"
+	    >getFncDecRetType</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Vrati typ navratovej hodnoty deklaracie funkcie
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getFncCalls" class="def"
+	    >getFncCalls</a
+	    > &#8759; [<a href="VariablesModule.html#t:Command"
+	    >Command</a
+	    >] &#8594; [<a href="VariablesModule.html#t:Command"
+	    >Command</a
+	    >]</p
+	  ><div class="doc"
+	  ><p
+	    >Zo vsetkych prikazov vyfiltruje len volania funkcii
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:fncDecAndDefMatch" class="def"
+	    >fncDecAndDefMatch</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</p
+	  ><div class="doc"
+	  ><p
+	    >Skontroluje typy parametrov a navratovu hodnotu definicii a deklaracii funkcii
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:setFncEvValue" class="def"
+	    >setFncEvValue</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Nastavi vyhodnotenu hodnotu do funkcie a skontroluje typ navratovej hodnoty a hodnotu
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isDefinitionMissing" class="def"
+	    >isDefinitionMissing</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; Bool</p
+	  ><div class="doc"
+	  ><p
+	    >Skontroluje ci nechyba definicie pre niektoru deklraciu
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><span class="keyword"
+	    >data</span
+	    >  <a name="t:VarTypes" class="def"
+	    >VarTypes</a
+	    >  </p
+	  ><div class="doc"
+	  ><p
+	    >Typy premennych pouzivanych pri typovej kontrole
+</p
+	    ></div
+	  ><div class="subs constructors"
+	  ><p class="caption"
+	    >Constructors</p
+	    ><table
+	    ><tr
+	      ><td class="src"
+		><a name="v:BoolVar" class="def"
+		  >BoolVar</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:IntVar" class="def"
+		  >IntVar</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:DoubleVar" class="def"
+		  >DoubleVar</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:StringVar" class="def"
+		  >StringVar</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:BlankVar" class="def"
+		  >BlankVar</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:FunctionVar" class="def"
+		  >FunctionVar</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:FunctionDecVar" class="def"
+		  >FunctionDecVar</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:FunctionDefVar" class="def"
+		  >FunctionDefVar</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ><tr
+	      ><td class="src"
+		><a name="v:VarName" class="def"
+		  >VarName</a
+		  ></td
+		><td class="doc empty"
+		>&nbsp;</td
+		></tr
+	      ></table
+	    ></div
+	  ><div class="subs instances"
+	  ><p id="control.i:VarTypes" class="caption collapser" onclick="toggleSection('i:VarTypes')"
+	    >Instances</p
+	    ><div id="section.i:VarTypes" class="show"
+	    ><table
+	      ><tr
+		><td class="src"
+		  >Eq <a href="VariablesModule.html#t:VarTypes"
+		    >VarTypes</a
+		    ></td
+		  ><td class="doc empty"
+		  >&nbsp;</td
+		  ></tr
+		><tr
+		><td class="src"
+		  >Ord <a href="VariablesModule.html#t:VarTypes"
+		    >VarTypes</a
+		    ></td
+		  ><td class="doc empty"
+		  >&nbsp;</td
+		  ></tr
+		><tr
+		><td class="src"
+		  >Read <a href="VariablesModule.html#t:VarTypes"
+		    >VarTypes</a
+		    ></td
+		  ><td class="doc empty"
+		  >&nbsp;</td
+		  ></tr
+		><tr
+		><td class="src"
+		  >Show <a href="VariablesModule.html#t:VarTypes"
+		    >VarTypes</a
+		    ></td
+		  ><td class="doc empty"
+		  >&nbsp;</td
+		  ></tr
+		></table
+	      ></div
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getVarType" class="def"
+	    >getVarType</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; Maybe <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Vrati typ premennej pre meno existujucej premennej
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isBlankVar" class="def"
+	    >isBlankVar</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isIntLiteral" class="def"
+	    >isIntLiteral</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isDoubleLiteral" class="def"
+	    >isDoubleLiteral</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isBoolLiteral" class="def"
+	    >isBoolLiteral</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isStringLiteral" class="def"
+	    >isStringLiteral</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isBlankLiteral" class="def"
+	    >isBlankLiteral</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isFunction" class="def"
+	    >isFunction</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isVarName" class="def"
+	    >isVarName</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isExpr" class="def"
+	    >isExpr</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isUnMinusLiteral" class="def"
+	    >isUnMinusLiteral</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getUnMinusLiteralType" class="def"
+	    >getUnMinusLiteralType</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isIntVar" class="def"
+	    >isIntVar</a
+	    > &#8759; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isDoubleVar" class="def"
+	    >isDoubleVar</a
+	    > &#8759; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isBoolVar" class="def"
+	    >isBoolVar</a
+	    > &#8759; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isStringVar" class="def"
+	    >isStringVar</a
+	    > &#8759; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:isFunctionVar" class="def"
+	    >isFunctionVar</a
+	    > &#8759; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    > &#8594; Bool</p
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:getValueType" class="def"
+	    >getValueType</a
+	    > &#8759; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:VarTypes"
+	    >VarTypes</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Vrati typ pre zadanu Expr hodnotu
+</p
+	    ></div
+	  ></div
+	></div
+      ></div
+    ><div id="footer"
+    ><p
+      >Produced by <a href="http://www.haskell.org/haddock/"
+	>Haddock</a
+	> version 2.9.2</p
+      ></div
+    ></body
+  ></html
+>

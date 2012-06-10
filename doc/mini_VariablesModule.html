@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><title
+    >VariablesModule</title
+    ><link href="ocean.css" rel="stylesheet" type="text/css" title="Ocean"
+     /><script src="haddock-util.js" type="text/javascript"
+    ></script
+    ><script type="text/javascript"
+    >//<![CDATA[
+window.onload = function () {pageLoad();};
+//]]>
+</script
+    ></head
+  ><body id="mini"
+  ><div id="module-header"
+    ><p class="caption"
+      >VariablesModule</p
+      ></div
+    ><div id="interface"
+    ><div class="top"
+      ><p class="src"
+	><span class="keyword"
+	  >data</span
+	  > <a href="VariablesModule.html#t:Expr" target="main"
+	  >Expr</a
+	  > </p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><span class="keyword"
+	  >data</span
+	  > <a href="VariablesModule.html#t:Command" target="main"
+	  >Command</a
+	  > </p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><span class="keyword"
+	  >type</span
+	  > <a href="VariablesModule.html#t:SymbolTable" target="main"
+	  >SymbolTable</a
+	  > </p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:castIntToDouble" target="main"
+	  >castIntToDouble</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:myDiv" target="main"
+	  >myDiv</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:set" target="main"
+	  >set</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:get" target="main"
+	  >get</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getAllFnc" target="main"
+	  >getAllFnc</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getAllFncDec" target="main"
+	  >getAllFncDec</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getFncDef" target="main"
+	  >getFncDef</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getFncDefAll" target="main"
+	  >getFncDefAll</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isFncDef" target="main"
+	  >isFncDef</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getFncDec" target="main"
+	  >getFncDec</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isFncDec" target="main"
+	  >isFncDec</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getFncParams" target="main"
+	  >getFncParams</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getFncRetType" target="main"
+	  >getFncRetType</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getFncBody" target="main"
+	  >getFncBody</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getFncVariables" target="main"
+	  >getFncVariables</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getFncRetValueExpr" target="main"
+	  >getFncRetValueExpr</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getFncRetValue" target="main"
+	  >getFncRetValue</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getEvaluatedRetValue" target="main"
+	  >getEvaluatedRetValue</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getFncDecParams" target="main"
+	  >getFncDecParams</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getFncDecRetType" target="main"
+	  >getFncDecRetType</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getFncCalls" target="main"
+	  >getFncCalls</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:fncDecAndDefMatch" target="main"
+	  >fncDecAndDefMatch</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:setFncEvValue" target="main"
+	  >setFncEvValue</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isDefinitionMissing" target="main"
+	  >isDefinitionMissing</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><span class="keyword"
+	  >data</span
+	  > <a href="VariablesModule.html#t:VarTypes" target="main"
+	  >VarTypes</a
+	  > </p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getVarType" target="main"
+	  >getVarType</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isBlankVar" target="main"
+	  >isBlankVar</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isIntLiteral" target="main"
+	  >isIntLiteral</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isDoubleLiteral" target="main"
+	  >isDoubleLiteral</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isBoolLiteral" target="main"
+	  >isBoolLiteral</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isStringLiteral" target="main"
+	  >isStringLiteral</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isBlankLiteral" target="main"
+	  >isBlankLiteral</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isFunction" target="main"
+	  >isFunction</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isVarName" target="main"
+	  >isVarName</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isExpr" target="main"
+	  >isExpr</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isUnMinusLiteral" target="main"
+	  >isUnMinusLiteral</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getUnMinusLiteralType" target="main"
+	  >getUnMinusLiteralType</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isIntVar" target="main"
+	  >isIntVar</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isDoubleVar" target="main"
+	  >isDoubleVar</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isBoolVar" target="main"
+	  >isBoolVar</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isStringVar" target="main"
+	  >isStringVar</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:isFunctionVar" target="main"
+	  >isFunctionVar</a
+	  ></p
+	></div
+      ><div class="top"
+      ><p class="src"
+	><a href="VariablesModule.html#v:getValueType" target="main"
+	  >getValueType</a
+	  ></p
+	></div
+      ></div
+    ></body
+  ></html
+>

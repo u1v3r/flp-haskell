@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+><head
+  ><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"
+     /><title
+    >InterpreterModule</title
+    ><link href="ocean.css" rel="stylesheet" type="text/css" title="Ocean"
+     /><script src="haddock-util.js" type="text/javascript"
+    ></script
+    ><script type="text/javascript"
+    >//<![CDATA[
+window.onload = function () {pageLoad();setSynopsis("mini_InterpreterModule.html");};
+//]]>
+</script
+    ></head
+  ><body
+  ><div id="package-header"
+    ><ul class="links" id="page-menu"
+      ><li
+	><a href="index.html"
+	  >Contents</a
+	  ></li
+	><li
+	><a href="doc-index.html"
+	  >Index</a
+	  ></li
+	></ul
+      ><p class="caption"
+      >flp-basic</p
+      ></div
+    ><div id="content"
+    ><div id="module-header"
+      ><p class="caption"
+	>InterpreterModule</p
+	></div
+      ><div id="description"
+      ><p class="caption"
+	>Description</p
+	><div class="doc"
+	><p
+	  >Stara sa o vyhodnocovanie naparsovanych vyrazov
+</p
+	  ></div
+	></div
+      ><div id="synopsis"
+      ><p id="control.syn" class="caption expander" onclick="toggleSection('syn')"
+	>Synopsis</p
+	><ul id="section.syn" class="hide" onclick="toggleSection('syn')"
+	><li class="src short"
+	  ><a href="#v:evaluate"
+	    >evaluate</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:evaluateParams"
+	    >evaluateParams</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; [<a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >] &#8594; [<a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >]</li
+	  ><li class="src short"
+	  ><a href="#v:decide"
+	    >decide</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</li
+	  ><li class="src short"
+	  ><a href="#v:initValues"
+	    >initValues</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; IO <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:interpretFnc"
+	    >interpretFnc</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; [<a href="VariablesModule.html#t:Command"
+	    >Command</a
+	    >] &#8594; IO <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:interpret"
+	    >interpret</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; <a href="VariablesModule.html#t:Command"
+	    >Command</a
+	    > &#8594; IO <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:checkReturnType"
+	    >checkReturnType</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; IO <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:assignFncCallsParams"
+	    >assignFncCallsParams</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; [<a href="VariablesModule.html#t:Command"
+	    >Command</a
+	    >] &#8594; IO <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:assignParams"
+	    >assignParams</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; [<a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >] &#8594; IO <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></li
+	  ><li class="src short"
+	  ><a href="#v:assignVar"
+	    >assignVar</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; IO <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></li
+	  ></ul
+	></div
+      ><div id="interface"
+      ><h1
+	>Documentation</h1
+	><div class="top"
+	><p class="src"
+	  ><a name="v:evaluate" class="def"
+	    >evaluate</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Vypocty nad premennyma
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:evaluateParams" class="def"
+	    >evaluateParams</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; [<a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >] &#8594; [<a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >]</p
+	  ><div class="doc"
+	  ><p
+	    >Hromadne vyhodnoti vsetky parametre
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:decide" class="def"
+	    >decide</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; Bool</p
+	  ><div class="doc"
+	  ><p
+	    >Vyhodnotene True|False vyrazov    
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:initValues" class="def"
+	    >initValues</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; IO <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Inicializuje symboltable na default hodnoty
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:interpretFnc" class="def"
+	    >interpretFnc</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; [<a href="VariablesModule.html#t:Command"
+	    >Command</a
+	    >] &#8594; IO <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Interpretuje pole deklaracii a definicii funkcii
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:interpret" class="def"
+	    >interpret</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; <a href="VariablesModule.html#t:Command"
+	    >Command</a
+	    > &#8594; IO <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Interpretuje vsetky Command prikazy   
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:checkReturnType" class="def"
+	    >checkReturnType</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; IO <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Skontroluje zhodu hodnoty a navratovej hodnoty funkcie
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:assignFncCallsParams" class="def"
+	    >assignFncCallsParams</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; [<a href="VariablesModule.html#t:Command"
+	    >Command</a
+	    >] &#8594; IO <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Priradi a skontroluje parametry volanych funkcii
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:assignParams" class="def"
+	    >assignParams</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; [<a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    >] &#8594; IO <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Hromadne priradi vsetky parametre
+</p
+	    ></div
+	  ></div
+	><div class="top"
+	><p class="src"
+	  ><a name="v:assignVar" class="def"
+	    >assignVar</a
+	    > &#8759; <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    > &#8594; String &#8594; <a href="VariablesModule.html#t:Expr"
+	    >Expr</a
+	    > &#8594; IO <a href="VariablesModule.html#t:SymbolTable"
+	    >SymbolTable</a
+	    ></p
+	  ><div class="doc"
+	  ><p
+	    >Priradi hodnotu do premennej
+</p
+	    ></div
+	  ></div
+	></div
+      ></div
+    ><div id="footer"
+    ><p
+      >Produced by <a href="http://www.haskell.org/haddock/"
+	>Haddock</a
+	> version 2.9.2</p
+      ></div
+    ></body
+  ></html
+>

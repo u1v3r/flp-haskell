@@ -1,0 +1,63 @@
+---------------------------------------------------------
+ 1. projekt do předmětu FLP							
+ Název projektu: flp-basic							
+---------------------------------------------------------
+
+~~~~~~~~~~~~~~~~~~~
+Struktura projektu:
+~~~~~~~~~~~~~~~~~~~
+
+	flp-basic/       -- Kořenová složka projektu
+	  src/           -- Zdrojové kódy rozdělené do modulu
+	    Main.hs      -- Hlavní modul
+	    ...    
+	  doc/           -- Vygenerovaná haddock dokumentace
+	  test/ 	     -- Testovací soubory
+	  	FAILtest.txt -- Testy, které mají skončiť chybou
+	  	OKTest.txt	 -- Testy správnych příkazu
+	  	...
+	  Makefile		 -- Viď. část "Kompilace spuštení programu"
+	  README		 -- README soubor
+	  rozdeleni		 -- Rozdělení bodu mezi jednotlivé členy týmu
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~	  
+Kompilace a spuštení programu:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Kompilace proběhne po zavolání příkazu "make" resp. "gmake" v kořenové složce projektu.
+Dojde k vytvoření spustitelného souboru s názvem xdvors08. Program očekává 
+právě jeden argument obsahující cestu s názvem souboru (napr. ./xdvors08 test/test1.vs).
+Dále je možné příkazem "make doc" vygenerovat dokumentaci do složky doc/ a pro 
+odstrěnení všech binárních souboru po kompilaci je připraven príkaz "make clean".
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~
+Popis a omezení programu:
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Program slouží k interpretaci jazyka FLP-2012-Basic, zároveň s tím, kontroluje
+správnost jazyka po syntaktické i sémantické stránce. V kódu mohou být použity
+komentáre jednořádkové nebo blokové (avšak neumožnuje vnorené komentáre). Jazyk
+obsahuje tři datové typy (Integer, Double, String) a umožnuje převod Integer -> Double.
+
+Program umožnuje použití všech príkazu napsaných v zadání jazyka FLP-2012-Basic 
+včetně nekolika rozšírení.
+
+Ve složce test/ se nachádzí soubory ok.test a fail.test, které obsahují okomentované 
+všechny podporované příkazy podle zadání + rozšírení.
+
+~~~~~~~~~~
+Rozšírení:
+~~~~~~~~~~
+
+- Interpret pracuje i s operátorem unární mínus (5%)
+	testovací soubor: test/unminus.test
+	
+- Pridána podpora zjednodušeného príkazu If-Then bez cásti Else (5%)
+	testovací soubor: test/simpleif.test
+	
+- Inicializace promenných v rámci jejich deklarace (5%)
+	testovací soubor: test/OK.test
